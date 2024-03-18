@@ -9,3 +9,8 @@
     border: 0 ;
     border-radius: calc(32 * var(--unit));
 }
+
+.buttonContainer:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
