@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: "/testPage",
+    basePath: "/StudentCheckIn",
     output: "export",  // <=== enables static exports
     reactStrictMode: true,
 };
