@@ -1,0 +1,48 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,301,701,300,501,401,901,400,2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+
+    --b0: #FFFFFF;
+    --b1: #FAFAFA;
+    --b2: #F5F5F5;
+    --b3: #E8E8EA;
+    --b4: #BBBBBD;
+    --b5: #8E8E90;
+    --b6: #606062;
+    --b7: #333335;
+    --b8: #1C1C1E;
+    --b9: #000000;
+
+    --primary: #1C75BC;
+    --primary-variant: #01AAE6;
+    --secondary: #EC6988;
+    --warning: #FFC216;
+    --alert: #C81D25;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    :root {
+        --unit: (1vh/8.1);
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    :root {
+        --unit: (1vw/14.4);
+    }
+}
+
+@media (max-width:512px) and (orientation: portrait) {
+    :root {
+        --unit: (1vw/5.12);
+    }
+}
