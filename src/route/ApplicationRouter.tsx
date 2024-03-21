@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from '../page/HomePage';
 import StudentIndexPage from '../page/StudentIndexPage';
 import TeacherIndexPage from '../page/TeacherIndexPage';
-const BASE_URL = '/StudentCheckIn/';
+
 const ApplicationRouter: React.FC = () => {
   return (
     <BrowserRouter>
