@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +21,7 @@
         <v-app>
             <v-container>
                 <v-card>
-                    <v-card-title class="bg-pink">{{title}}</v-card-title>
+                    <v-card-title class="bg-blue-grey">{{title}}</v-card-title>
                       <v-card-actions >
                         <template v-if="user">
                           <div class="pa-2">
@@ -36,7 +35,7 @@
                     </v-card-actions>
 
                     <div  class="pa-2">
-                        
+             
                     </div>
 
                     <v-card v-if="editmode==='แบบฟอร์ม'">
@@ -49,7 +48,7 @@
                                  <h2>
                                     <h2>{{q.quiz_name}}</h2>
                                 </h2>
-                            </div><v-text-field v-model="editcheckin.qiz_send" label="คำตอบ"></v-text-field>
+                            </div>จงเติมคำตอบลงช่องว่าง: <v-text-field v-model="editcheckin.qiz_send" label="คำตอบ"></v-text-field>
 
                        </v-card-text>
                        <v-card-actions>
@@ -59,11 +58,14 @@
                      </v-card>
     
                   
-                     <v-card-actions>
-                        <v-btn @click="sendob()" class="btn bg-blue mr-2">Check name</v-btn>
-                        <a type="button" class="btn bg-red" href="index.html">Back</a>
+                    <v-card-actions>
+                        <!--<v-btn @click="readData()">Read Data (get)</v-btn>
+                        <v-btn @click="autoRead()">Auto Read (onSnapshot)</v-btn>-->
+                        <v-btn @click="sendob()" class="btn btn-outline-primary" >คลิกเพื่อเช็คชื่อของคุณ</v-btn>
+                        <a type="button" class="btn btn-outline-danger" href="project.html">Back</a>
                     </v-card-actions>
                     
+                   
     
                     <v-card-actions>
                         <v-btn @click="google_login()" v-if="!user"> Login</v-btn>
@@ -74,6 +76,8 @@
                     </v-card-actions>
                 </v-card>
                
+
+                          
               <div class="pa-6 text-center">{{footer}}</div>
             </v-container>        
           </v-app>
@@ -89,15 +93,16 @@
         messagingSenderId: "287396430545",
         appId: "1:287396430545:web:3ac013088ca56393767bf0",
         measurementId: "G-D3QE6V6FGR"
-    };
+      };
           firebase.initializeApp(firebaseConfig);      
           const db = firebase.firestore();
   
         const app = Vue.createApp({
           data() {
             return {
-              title: "Web Application : สำหรับการเช็คชื่อนักศึกษา และ ถาม/ตอบ ในห้องเรียน",
+              title: " ",
               footer: " ",
+              students: [],
               editstd: {},
               editquiz: {},
               quiz: [],
@@ -107,7 +112,9 @@
               user: null,
               ustudent: null,
             };
-          },      
+          },
+  
+          
           mounted() {
               firebase.auth().onAuthStateChanged((user)=>{
                   if (user) {
@@ -142,7 +149,12 @@
                   });
                   this.quiz = quizlist;
               });
+
+              
           },
+          
+  
+  
           methods: {
             computed: {
                 filteredList() {
@@ -208,7 +220,7 @@
             google_logout(){
               if(confirm("Are you sure?")){
                 firebase.auth().signOut();
-                window.location.href = 'index.html';
+                window.location.href = 'project.html';
               }
             },
             getstudent(email){
