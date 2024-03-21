@@ -40,8 +40,8 @@ export default function HomePage() {
             </h1>
             <p className="schoolName">College of Computing</p>
           </div>
-          <Link to="/StudentIndexPage">Student</Link>
-          <Link to="/TeacherIndexPage">Teacher</Link>
+          <Link to="/StudentCheckIn/StudentIndexPage">Student</Link>
+          <Link to="/StudentCheckIn/TeacherIndexPage">Teacher</Link>
           <div className="actionSection">
             <Button100 onClick={signInGoogleUser}>เข้าสู่ระบบ</Button100>
           </div>
