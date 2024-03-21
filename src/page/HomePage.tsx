@@ -26,7 +26,6 @@ export default function HomePage() {
     console.log(response);
   }
 
-
   return (
     <div className="main">
       {isSmallScreen ? (
