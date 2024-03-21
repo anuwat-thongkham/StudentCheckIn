@@ -1,15 +1,15 @@
 import React from 'react';
 import '../style/global/global.scss'
-import '../style/conponent/button100Style.scss'
+import '../style/conponent/button300Style.scss'
 
 interface ButtonProps {
   onClick?: () => void;
   children: React.ReactNode;
 }
 
-const Button100: React.FC<ButtonProps> = ({ onClick, children }) => {
+const Button300: React.FC<ButtonProps> = ({ onClick, children }) => {
   return (
-    <div className="button100">
+    <div className="button300">
       <button className="buttonContainer" onClick={onClick}>
         {children}
       </button>
@@ -17,4 +17,4 @@ const Button100: React.FC<ButtonProps> = ({ onClick, children }) => {
   );
 };
 
-export default Button100;
+export default Button300;

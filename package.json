@@ -12,6 +12,10 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@react-firebase/auth": "^0.2.10",
+    "@types/firebase": "^3.2.1",
+    "firebase": "^10.9.0",
+    "firebaseui": "^6.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",

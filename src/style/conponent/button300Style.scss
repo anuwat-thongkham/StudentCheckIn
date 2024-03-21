@@ -1,4 +1,4 @@
-.button100 {
+.button300 {
     .buttonContainer {
         width: calc(416 * var(--unit));
         height: calc(64 * var(--unit));
@@ -6,7 +6,7 @@
         place-content: center;
         font: 500 calc(20 * var(--unit)) 'IBM Plex Sans Thai';
         color: var(--b0);
-        background: var(--primary);
+        background: var(--alert);
         border: 0;
         border-radius: calc(32 * var(--unit));
     }

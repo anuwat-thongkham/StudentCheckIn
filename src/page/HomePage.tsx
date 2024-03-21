@@ -1,12 +1,14 @@
 
 import { useState, useEffect } from 'react';
+import { signInWithGooglePopup } from '../config/firebase';
 
 import '../style/global/global.scss';
 import '../style/page/homePageStyle.scss'
 import NoSupport from '../component/NoSupport';
 import Button100 from '../component/Button100';
 
-export default function Home() {
+
+export default function HomePage() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
@@ -18,6 +20,13 @@ export default function Home() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+
+  const signInGoogleUser = async () => {
+    const response = await signInWithGooglePopup();
+    console.log(response);
+  }
+
+
   return (
     <div className="main">
       {isSmallScreen ? (
@@ -28,11 +37,11 @@ export default function Home() {
             <h1 className="header">
               ระบบเช็คชื่อ<br />
               นักศึกษา
-              </h1>
-              <p className="schoolName">College of Computing</p>
+            </h1>
+            <p className="schoolName">College of Computing</p>
           </div>
           <div className="actionSection">
-            <Button100>เข้าสู่ระบบ</Button100>
+            <Button100 onClick={signInGoogleUser}>เข้าสู่ระบบ</Button100>
           </div>
         </div>
       )}
