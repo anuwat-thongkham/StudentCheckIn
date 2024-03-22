@@ -20,6 +20,8 @@
     <div id = "app">
         <v-app>
             <v-container>
+              <v-row justify="center">
+                <v-col cols="12" md="10">
                 <v-card>
                     <v-card-title class="bg-blue">{{title}}</v-card-title>
                       <v-card-actions >
@@ -68,6 +70,8 @@
                    
     
                     <v-card-actions>
+                      <v-row justify="center">
+                        <v-col cols="12" md="1">
                         <v-btn @click="google_login()" v-if="!user"> Login</v-btn>
                         <div v-if="user">
                           <v-btn @click="google_logout()" v-if="user" class="btn btn-danger"> Logout</v-btn>   

@@ -19,9 +19,11 @@
     <div id="app">
       <v-app>
         <v-container>
+          <v-row justify="center">
+            <v-col cols="12" md="10">
             <v-card>
                 <v-card-title class="bg-blue">{{title}}</v-card-title>
-                  <v-card-actions >
+                  <v-card-actions class="text-center">
                     <template v-if="user">
                       <div class="pa-2">
                           <v-avatar><img :src="user.photoURL" /></v-avatar>
@@ -39,9 +41,11 @@
                 </div>
 
                 <v-card-actions>
-                    <v-btn @click="google_login()" v-if="!user" class="btn bg-blue"> Login</v-btn>
+                  <v-row justify="center">
+                    <v-col cols="12" md="1">
+                    <v-btn @click="google_login()" v-if="!user" class="btn bg-blue"> Login</v-btn><br>
                     <div v-if="user">
-                      <v-btn @click="google_logout()" v-if="user" class="btn btn-danger"> Logout</v-btn>   
+                      <v-btn @click="google_logout()" v-if="user" class="btn btn-danger"> Logout</v-btn><br>  
                       <div v-for="(s) in students">
                         <v-btn v-if="user.email == s.email"><a href="students.html" class="btn btn-success">Next for students</a></v-btn>
                       </div> 
