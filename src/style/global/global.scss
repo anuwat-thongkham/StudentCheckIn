@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
+
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -27,6 +30,14 @@
     --secondary: #EC6988;
     --warning: #FFC216;
     --alert: #C81D25;
+}
+
+.material-symbols-sharp {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 100,
+        'GRAD' 0,
+        'opsz' 24
 }
 
 @media (min-aspect-ratio: 16/9) {

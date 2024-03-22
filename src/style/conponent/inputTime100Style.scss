@@ -1,0 +1,49 @@
+.inputTime100 {
+
+    .container {
+        width: calc(416 * var(--unit));
+        height: auto;
+    }
+
+    .inputName {
+        width: calc(416 * var(--unit));
+        height: calc(32 * var(--unit));
+        display: flex;
+        align-items: center;
+        font: 500 calc(18 * var(--unit)) 'Prompt';
+        color: var(--b8);
+    }
+
+    .inputField {
+        width: calc(416 * var(--unit));
+        height: calc(64 * var(--unit));
+        border-radius: calc(14 * var(--unit));
+        border: calc(1 * var(--unit)) solid var(--b3);
+        background: var(--b2);
+        box-sizing: border-box;
+        font: 500 calc(20 * var(--unit)) 'IBM Plex Sans Thai';
+        color: var(--b8);
+        padding: 0 calc(16 * var(--unit));
+    }
+
+    .inputField:focus {
+        border: calc(2 * var(--unit)) solid var(--primary-variant);
+        outline: rgba(#01AAE6, 0.3) solid calc(3 * var(--unit));
+    }
+    
+    .errorText {
+        width: calc(416 * var(--unit));
+        height: auto;
+        margin: calc(8 * var(--unit)) 0 0 0;
+        display: flex;
+        align-items: center;
+        font: 400 calc(18 * var(--unit)) 'Prompt';
+        color: var(--warning);
+    }
+
+    .errorInputField {
+        border: calc(2 * var(--unit)) solid var(--warning);
+        outline: rgba(#FFC216, 0.3) solid calc(3 * var(--unit));
+        background: rgba(#FFC216, 0.3);
+    }
+}

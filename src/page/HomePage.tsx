@@ -1,16 +1,14 @@
 
 import { useState, useEffect } from 'react';
-import { signInWithGooglePopup } from '../config/firebase';
-
+import { useNavigate } from 'react-router-dom';
 import '../style/global/global.scss';
 import '../style/page/homePageStyle.scss'
 import NoSupport from '../component/NoSupport';
 import Button100 from '../component/Button100';
-import { Link } from 'react-router-dom';
-
 
 export default function HomePage() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => {
@@ -22,10 +20,9 @@ export default function HomePage() {
   }, []);
 
 
-  const signInGoogleUser = async () => {
-    const response = await signInWithGooglePopup();
-    console.log(response);
-  }
+  const handleStartButton = () => {
+    navigate('/StudentCheckIn/CreateAccountIndexPage');
+  };
 
   return (
     <div className="main">
@@ -40,10 +37,8 @@ export default function HomePage() {
             </h1>
             <p className="schoolName">College of Computing</p>
           </div>
-          <Link to="/StudentCheckIn/StudentIndexPage">Student</Link>
-          <Link to="/StudentCheckIn/TeacherIndexPage">Teacher</Link>
           <div className="actionSection">
-            <Button100 onClick={signInGoogleUser}>เข้าสู่ระบบ</Button100>
+            <Button100 onClick={handleStartButton} >เริ่มต้น</Button100>
           </div>
         </div>
       )}

@@ -1,0 +1,46 @@
+.sumaryCheckInPage {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .statusDisplay {
+        width: calc(416 * var(--unit));
+        height: calc(48 * var(--unit));
+        margin: calc(160 * var(--unit)) auto 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font: 600 calc(32 * var(--unit)) 'Prompt';
+        color: var(--secondary);
+    }
+
+    .sujectDisplay {
+        width: calc(416 * var(--unit));
+        height: calc(32 * var(--unit));
+        margin: calc(72 * var(--unit)) auto 0 auto;
+        display: flex;
+        align-items: center;
+        font: 400 calc(24 * var(--unit)) 'IBM Plex Sans Thai';
+        color: var(--b8);
+    }
+
+    .timeStamptDisplay {
+        width: calc(416 * var(--unit));
+        height: calc(32 * var(--unit));
+        margin: calc(24 * var(--unit)) auto 0 auto;
+        display: flex;
+        align-items: center;
+        font: 400 calc(16 * var(--unit)) 'IBM Plex Sans Thai';
+        color: var(--b6);
+    }
+
+    .actionSection {
+        width: calc(416 * var(--unit));
+        height: calc(160 * var(--unit));
+        margin: auto auto 0 auto;
+        display: grid;
+        place-content: center;
+    }
+}

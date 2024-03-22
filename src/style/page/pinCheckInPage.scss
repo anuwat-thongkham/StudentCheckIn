@@ -1,0 +1,70 @@
+.pinCheckInPage {
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        width: calc(416 * var(--unit));
+        height: calc(32 * var(--unit));
+        margin: calc(136 * var(--unit)) auto 0 auto;
+        display: flex;
+        align-items: center;
+        font: 500 calc(24 * var(--unit)) 'IBM Plex Sans Thai';
+        color: var(--b8);
+    }
+
+    .title span {
+        padding: 0 0 calc(4 * var(--unit)) 0;
+        font: 500 calc(24 * var(--unit)) 'Satoshi';
+    }
+
+    .pinContainer {
+        width: calc(416 * var(--unit));
+        height: calc(80 * var(--unit));
+        margin: calc(40 * var(--unit)) auto 0 auto;
+    }
+
+    .pinFieldStack {
+        width: calc(416 * var(--unit));
+        height: calc(80 * var(--unit));
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .pinField {
+        box-sizing: border-box;
+        width: calc(80 * var(--unit)) !important;
+        height: calc(80 * var(--unit));
+        display: grid;
+        background: var(--b1);
+        border: calc(1 * var(--unit)) solid var(--b3);
+        border-radius: calc(14 * var(--unit));
+        font: 500 calc(32 * var(--unit)) 'Satoshi';
+        color: var(--primary);
+    }
+
+    .pinField:focus{
+        border: calc(2 * var(--unit)) solid var(--primary-variant);
+        outline: rgba(#01AAE6, 0.3) solid calc(3 * var(--unit));
+    }
+
+    .errorText{
+        width: calc(416 * var(--unit));
+        height: calc(32 * var(--unit));
+        margin: calc(40 * var(--unit)) auto 0 auto;
+        display: flex;
+        align-items: center;
+        font: 500 calc(24 * var(--unit)) 'IBM Plex Sans Thai';
+        color: var(--warning);
+    }
+
+    .actionSection {
+        width: calc(416 * var(--unit));
+        height: calc(160 * var(--unit));
+        margin: auto auto 0 auto;
+        display: grid;
+        place-content: center;
+    }
+}

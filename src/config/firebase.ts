@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import { getFirestore } from "firebase/firestore"
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
@@ -15,8 +16,6 @@ const firebaseConfig = {
     measurementId: "G-9RLGKKNPXS"
 };
 
-// Initialize Firebase
-export const firebaseApp = initializeApp(firebaseConfig);
 // Initialize Firebase Auth provider
 const provider = new GoogleAuthProvider();
   
@@ -25,5 +24,8 @@ provider.setCustomParameters({
     prompt : "select_account "
 });
 
+// Initialize Firebase
+export const firebaseApp = initializeApp(firebaseConfig);
+export const firestore = getFirestore(firebaseApp);
 export const auth = getAuth();
-export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
+export const signInWithGooglePopup = () => signInWithPopup(auth, provider); 

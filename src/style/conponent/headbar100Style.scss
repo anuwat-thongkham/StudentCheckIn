@@ -1,0 +1,42 @@
+.headbar100{
+    width: 100vw;
+    height: calc(64 * var(--unit));
+    background: var(--b0);
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    .container{
+        width: 100vw;
+        height: calc(64 * var(--unit));
+        background: var(--b0);
+        display: flex;
+    }
+
+    .backButton{
+        width:  calc(48 * var(--unit));
+        height: calc(48 * var(--unit));
+        border-radius: calc(12 * var(--unit));
+        margin: auto 0 auto calc(16 * var(--unit));
+        background: var(--primary);
+        border: 0;
+        display: grid;
+        place-content: center;
+    }
+    .backButtonIcon{
+        font-size: calc(32 * var(--unit));
+        color: var(--b0);
+    }
+
+    .schoolName{
+        width: calc(384 * var(--unit));
+        height: calc(64 * var(--unit));
+        margin: auto 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font: 700 calc(24 * var(--unit)) 'Satoshi';
+        color: var(--primary);
+    }
+}

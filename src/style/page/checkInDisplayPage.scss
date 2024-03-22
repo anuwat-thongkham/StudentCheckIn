@@ -1,0 +1,63 @@
+.checkInDisplayPage{
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        width: calc(416 * var(--unit));
+        height: calc(32 * var(--unit));
+        margin: calc(136 * var(--unit)) auto 0 auto;
+        display: flex;
+        align-items: center;
+        font: 500 calc(24 * var(--unit)) 'Prompt';
+        color: var(--b8);
+    }
+
+    .pin{
+        width: calc(416 * var(--unit));
+        height: calc(80 * var(--unit));
+        margin: calc(56 * var(--unit)) auto 0 auto;
+        display: flex;
+        align-items: center;
+        letter-spacing: calc(112 * var(--unit));
+        font: 500 calc(32 * var(--unit)) 'Satoshi';
+        color: var(--b8);
+    }
+
+    .existTimeTitle {
+        width: calc(416 * var(--unit));
+        height: calc(32 * var(--unit));
+        margin: calc(56 * var(--unit)) auto 0 auto;
+        display: flex;
+        align-items: center;
+        font: 500 calc(24 * var(--unit)) 'Prompt';
+        color: var(--b8);
+    }
+
+    .existTime{
+        width: calc(416 * var(--unit));
+        height: calc(80 * var(--unit));
+        margin: calc(16 * var(--unit)) auto 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font: 500 calc(32 * var(--unit)) 'Satoshi';
+        color: var(--primary-variant);
+    }
+    .existTime span{
+        font: 400 calc(32 * var(--unit)) 'Prompt';
+    }
+
+    .actionSection{
+        width: 100vw;
+        height: calc(248 * var(--unit));
+        margin: auto 0 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: calc(24 * var(--unit));
+    }
+}

@@ -6,7 +6,7 @@ export default function NoSupport() {
     return (
         <div className="noSupport">
             <img className='noSupportImage' src={noSupportImage} alt="No Support" width="100" height="100" />
-            <p className='noSupportDescription'>รองรับการแสดงผลเฉพาะบนสมาร์ทโฟน</p>
+            <p className='noSupportDescription'>รองรับการแสดงผลเฉพาะบนสมาร์ทโฟนแนวตั้ง</p>
         </div>
     )
 }

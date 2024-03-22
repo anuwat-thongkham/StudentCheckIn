@@ -1,0 +1,32 @@
+.createAccountStudentPage {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        width: calc(416 * var(--unit));
+        height: calc(32 * var(--unit));
+        margin: calc(136 * var(--unit)) auto 0 auto;
+        display: flex;
+        align-items: center;
+        font: 500 calc(24 * var(--unit)) 'Prompt';
+        color: var(--b8);
+    }
+
+    .input1Container,
+    .input2Container,
+    .input3Container {
+        width: calc(416 * var(--unit));
+        height: fit-content;
+        margin: calc(24 * var(--unit))auto 0 auto;
+    }
+
+    .actionSection {
+        width: calc(416 * var(--unit));
+        height: calc(160 * var(--unit));
+        margin: auto auto 0 auto;
+        display: grid;
+        place-content: center;
+    }
+}
