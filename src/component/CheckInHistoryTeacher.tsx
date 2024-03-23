@@ -11,17 +11,19 @@ interface HistoryData {
 
 const CheckInHistoryTeacher: React.FC<{ teacherSession: string }> = ({ teacherSession }) => {
     const [historyData, setHistoryData] = useState<HistoryData[]>([]);
-    const [teacherEmail, setTeacherEmail] = useState<string>('') as any;
+    // const [teacherEmail, setTeacherEmail] = useState<string>('') as any;
 
     useEffect(() => {
+        let teacherEmail = '';
+
         const unsubscribe = auth.onAuthStateChanged(user => {
             if (user) {
                 // Get the current user's email
-                const currentUserEmail = user.email;
-                setTeacherEmail(currentUserEmail);
+                const currentUserEmail = user.email as string;
+                teacherEmail  = currentUserEmail;
 
             } else {
-                setTeacherEmail('No Sign in');
+                teacherEmail  = 'No Sign in';
             }
         });
         const findCollectionByPin = async () => {
