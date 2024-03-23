@@ -89,7 +89,6 @@ export default function CreateCheckInPage() {
         const currentDate = new Date();
         const hours = currentDate.getHours().toString().padStart(2, '0');
         const minutes = currentDate.getMinutes().toString().padStart(2, '0');
-        // return `${hours}:${minutes}`;
         let setedTime = time.split(':');
         let setedHour = Number(setedTime[0]);
         let setedMinute = Number(setedTime[1]);
