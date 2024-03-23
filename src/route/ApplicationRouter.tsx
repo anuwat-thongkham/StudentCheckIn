@@ -11,6 +11,9 @@ import SumaryCheckInPage from '../page/SumaryCheckInPage';
 import PinCheckInPage from '../page/PinCheckInPage';
 import CreateCheckInPage from '../page/CreateCheckInPage';
 import CheckInDisplayPage from '../page/CheckInDisplayPage';
+import CheckInStudentDisplayPage from '../page/CheckInStudentDisplayPage';
+import TeacherHistoryPage from '../page/TeacherHistoryPage';
+
 const ApplicationRouter: React.FC = () => {
   return (
     <Router>
@@ -25,6 +28,8 @@ const ApplicationRouter: React.FC = () => {
         <Route path='/StudentCheckIn/PinCheckInPage' element={<PinCheckInPage />} />
         <Route path='/StudentCheckIn/CreateCheckInPage' element={<CreateCheckInPage />} />
         <Route path='/StudentCheckIn/CheckInDisplayPage' element={<CheckInDisplayPage />} />
+        <Route path='/StudentCheckIn/CheckInStudentDisplayPage' element={<CheckInStudentDisplayPage />} />
+        <Route path='/StudentCheckIn/TeacherHistoryPage' element={<TeacherHistoryPage />} />
       </Routes>
     </Router>
   );

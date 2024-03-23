@@ -4,7 +4,6 @@ import '../style/global/global.scss';
 import '../style/page/studentIndexPageStyle.scss';
 
 import Button100 from "../component/Button100";
-import Button200 from "../component/Button200";
 import Button300 from "../component/Button300";
 import NoSupport from "../component/NoSupport";
 
@@ -62,9 +61,9 @@ function StudentIndexPage() {
                     <div className="button1Container">
                         <Button100 onClick={handleCheckInButton}>เข้าเช็คชื่อ</Button100>
                     </div>
-                    <div className="button2Container">
+                    {/* <div className="button2Container">
                         <Button200>ประวัติการเช็คชื่อ</Button200>
-                    </div>
+                    </div> */}
                     <div className="actionSection">
                         <Button300 onClick={signOutFromFirebase}>ออกจากระบบ</Button300>
                     </div>

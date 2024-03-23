@@ -111,6 +111,7 @@ export default function CreateCheckInPage() {
         }
     }
     const onCreateButton = async () => {
+        const currentTime = new Date().toLocaleString();;
         if (!validateTime()) {
             setIsTimeError(true);
             setTimeErrorMassage('ตั้งเวลาต่ำเกินไป');
@@ -124,6 +125,7 @@ export default function CreateCheckInPage() {
                     checkInSession_subject_room: room,
                     checkInSession_exit_time: time,
                     checkInSession_isEnd: false,
+                    checkInSession_started_time:currentTime,
                     checkInSession_student_data:[],
                 }
                 await addDoc(collection(firestore, 'CheckInSession'), checkInSession)

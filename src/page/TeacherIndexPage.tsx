@@ -22,7 +22,7 @@ function TeacherIndexPage() {
     const navigate = useNavigate();
     const [email, setEmail] = useState<string>('') as any;
 
-    const [subjectNeame, setSubjectName] = useState<string>('');
+    const [subjectNeame, setSubjectName] = useState<string>('') as any;
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(user => {
             if (user) {
@@ -80,6 +80,9 @@ function TeacherIndexPage() {
     const handleDisplayBttonn =() =>{
         navigate(`/StudentCheckIn/CheckInDisplayPage`);
     }
+    const handleHistory=()=>{
+        navigate(`/StudentCheckIn/TeacherHistoryPage`);
+    }
     return (
         <div className="main">
             {isSmallScreen ? (
@@ -93,7 +96,7 @@ function TeacherIndexPage() {
                         <Button100 onClick={handleCreateSessionButton}>สร้างการเช็คชื่อ</Button100>
                     </div>
                     <div className="button2Container">
-                        <Button200>ประวัติการเช็คชื่อ</Button200>
+                        <Button200 onClick={handleHistory}>ประวัติการเช็คชื่อ</Button200>
                     </div>
                     {teacherSession != '' &&
                         <div className="checkInOnContainer">

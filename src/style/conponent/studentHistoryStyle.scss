@@ -1,0 +1,35 @@
+.studentHistory {
+
+    width: calc(416 * var(--unit));
+    height: calc(128 * var(--unit));
+    border-bottom: calc(1 * var(--unit)) solid var(--b3);
+padding-top: calc(16 * var(--unit));
+    .id {
+        display: none;
+    }
+
+    .name {
+        width: calc(400 * var(--unit));
+        height: calc(32 * var(--unit));
+        margin: calc(16 * var(--unit)) 0 0 calc(8 var(--unit));
+        font: 500 calc(20 * var(--unit)) 'IBM Plex Sans Thai';
+        color: var(--b8);
+    }
+
+    .idAndEmail {
+        width: calc(400 * var(--unit));
+        height: calc(32 * var(--unit));
+        margin: calc(16 * var(--unit)) 0 0 calc(8 var(--unit));
+        font: 400 calc(16 * var(--unit)) 'Satoshi';
+        color: var(--b6);
+    }
+
+    .time{
+        width: calc(400 * var(--unit));
+        height: calc(32 * var(--unit));
+        margin: calc(16 * var(--unit)) 0 0 calc(8 var(--unit));
+        font: 400 calc(18 * var(--unit)) 'IBM Plex Sans Thai';
+        color: var(--b8);
+
+    }
+}

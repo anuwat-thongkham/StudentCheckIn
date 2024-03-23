@@ -1,0 +1,10 @@
+.checkInHistoryTeacher {
+    width: calc(416 * var(--unit));
+    height: calc(72 * var(--unit));
+    margin: calc(16 * var(--unit)) auto 0 auto;
+    border: calc(1 * var(--unit)) solid var(--b8);
+    border-radius: calc(16 * var(--unit));
+    background: var(--b0);
+    font: 500 calc(18 * var(--unit)) 'IBM Plex Sans Thai';
+    color: var(--b8);
+}

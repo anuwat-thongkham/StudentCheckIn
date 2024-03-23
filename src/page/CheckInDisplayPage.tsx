@@ -92,6 +92,10 @@ export default function CheckInDisplayPage() {
         }
     };
 
+    const handleDisplayButton =()=>{
+        navigate('/StudentCheckIn/CheckInStudentDisplayPage');
+    }
+
     return (
         <div className="main">
             {isSmallScreen ? (
@@ -104,7 +108,7 @@ export default function CheckInDisplayPage() {
                     <h2 className="existTimeTitle">สิ้นสุดการเช็คชื่อในเวลา</h2>
                     <p className="existTime">{exitHour}&nbsp;<span>นาฬิกา</span>&nbsp;{exitMinute}&nbsp;<span>นาที</span></p>
                     <div className="actionSection">
-                        <Button200 onClick={handleEndButton}>รายชื่อนักศึกษาที่เช็คชื่อแล้ว</Button200>
+                        <Button200 onClick={handleDisplayButton}>รายชื่อนักศึกษาที่เช็คชื่อแล้ว</Button200>
                         <Button300 onClick={handleEndButton}>สิ้นสุดการเช็คชื่อ</Button300>
                     </div>
                 </div>
